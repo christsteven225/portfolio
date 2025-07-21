@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Portfolio-Procoder09</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+
+
+    <header>
+        <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000">Christ</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <a href="index.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+            <a href="about.html"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+            <a href="skills.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Skills</a>
+            <a href="services.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Services</a>
+            <a href="work.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Work</a>
+            <a href="contact.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+        </div>
+    </header>
+    <!-- Skill Section -->
+
+    <section class="skills" id="skills">
+        <div class="title">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">My Skills</h2>
+        </div>
+        <div class="content">
+            <div class="column col-left">
+                <h2 class="content-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">My Skills and Experiences</h2>
+                <div class="paragraph-text" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="300">💻 *Languages & Technologies*  
+                    - *HTML5 / CSS3*: Building modern, responsive, and accessible web pages  
+                    - *JavaScript*: Creating dynamic client-side interactions and UI features  
+                    - *PHP*: Developing secure back-end logic and connecting to databases  
+                    - *Python*: Writing automation scripts, web backends (Flask/Django), and data tools  
+                    - *SQL/MySQL*: Database design, queries, and integration  
+                    - *Bootstrap*: Fast UI prototyping and mobile-first design  
+                    
+                    📱 *Development Areas*  
+                    - Front-end and UI/UX development  
+                    - Back-end logic and database connectivity  
+                    - REST API integration and mobile responsiveness  
+                    - Web App and basic Android App creation  
+                    
+                    🧠 *Experience Highlights*  
+                    - Built and deployed several personal and client websites  
+                    - Developed admin dashboards and dynamic forms  
+                    - Integrated third-party APIs and payment systems  
+                    - Worked on custom solutions for data collection and user management  
+                    
+                    I constantly challenge myself to improve and adapt to new tools and frameworks. Every line of code I write is crafted with purpose.</div>
+                <a href="#" class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">See more</a>
+            </div>
+            <div class="column col-right">
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100">
+                        <span>HTML</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="line html" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="140"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                        <span>CSS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="line css" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="240"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
+                        <span>Javascript</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="line javascript" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="340"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
+                        <span>Python</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="line python" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="440"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500">
+                        <span>PHP</span>
+                        <span>65%</span>
+                    </div>
+                    <div class="line php" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="540"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <span class="footer-title">Christ Steven</span>
+        <p>Copyright @2024 <a href="#">Coding Christ</a>. All Rights Reserved.</p>
+      </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+
+        window.addEventListener("scroll", function(){
+    scrollBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+//javascript for scroll back to top on click scroll-to-top button
+
+// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// });
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelector(".navigation a");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // Navigation Effects
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        navigationItems.forEach((navigationItem) => {
+            navigationItem.addEventListener("click", () => {
+                menuBtn.classList.remove("active");
+                navigation.classList.remove("active")
+            })
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

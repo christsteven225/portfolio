@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Portfolio-Procoder09</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000">christ</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <a href="index.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+            <a href="about.html"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+            <a href="skills.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Skills</a>
+            <a href="services.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Services</a>
+            <a href="work.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Work</a>
+            <a href="contact.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+        </div>
+    </header>
+    <!--  About Section -->
+
+    <section class="about" id="about">
+        <div class="title reveal">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">About me</h2>
+        </div>
+        <div class="content">
+            <div class="column col-left reveal">
+                <div class="img-card" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+                    <img src="img1.jpg" alt="">
+                </div>
+            </div>
+            <div class="column col-right reveal">
+                <h2 class="content-title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Hey There! I am Christ Steven</h2>
+                <p class="paragraph-text" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">I’m a passionate Web and App Developer with a strong programming background. I specialize in creating clean, responsive, and user-focused websites and applications.
+
+                    With a deep interest in problem-solving and digital innovation, I build solutions that are not only functional but also intuitive and efficient. My work is driven by a commitment to quality, continuous learning, and collaboration.
+                    
+                    From front-end design to back-end logic, I bring ideas to life using technologies like HTML, CSS, JavaScript, Python, and PHP. Whether it's a landing page, a full-stack web app, or a custom tool, I always aim to deliver solid and scalable results.</p>
+                <a href="#" class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="600">See more</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <span class="footer-title">Christ Steven</span>
+        <p>Copyright @2024 <a href="#">Coding Christ</a>. All Rights Reserved.</p>
+      </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+
+        window.addEventListener("scroll", function(){
+    scrollBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+//javascript for scroll back to top on click scroll-to-top button
+
+// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// });
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelector(".navigation a");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // Navigation Effects
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        navigationItems.forEach((navigationItem) => {
+            navigationItem.addEventListener("click", () => {
+                menuBtn.classList.remove("active");
+                navigation.classList.remove("active")
+            })
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

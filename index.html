@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christ Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+
+
+    <header>
+        <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000">Christ</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <a href="index.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+            <a href="about.html"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+            <a href="skills.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Skills</a>
+            <a href="services.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Services</a>
+            <a href="work.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Work</a>
+            <a href="contact.html" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Contact</a>
+        </div>
+    </header>
+
+    <section class="main" id="main">
+        <div class="content">
+            <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">Hello, I'm <br><span>Christ Steven</span></h2>
+            <div class="animated-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
+                <h3>Web Developer</h3>
+                <h3>Developer App</h3>
+                <h3>Programmer</h3>
+            </div>
+            <a href="work.html" class="btn" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1000">See My Work</a>
+            <div class="media-icons">
+                <a href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1200"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1300"><i class="fab fa-instagram"></i></a>
+                <a href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1400"><i class="fab fa-twitter"></i></a>
+                <a href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1500"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+  
+      <footer class="footer">
+        <span class="footer-title">Christ Steven</span>
+        <p>Copyright @2024 <a href="#">Coding Christ</a>. All Rights Reserved.</p>
+      </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+
+        window.addEventListener("scroll", function(){
+    scrollBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+//javascript for scroll back to top on click scroll-to-top button
+
+// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// });
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelector(".navigation a");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // Navigation Effects
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        navigationItems.forEach((navigationItem) => {
+            navigationItem.addEventListener("click", () => {
+                menuBtn.classList.remove("active");
+                navigation.classList.remove("active")
+            })
+        })
+
+
+
+    </script>
+</body>
+</html>
